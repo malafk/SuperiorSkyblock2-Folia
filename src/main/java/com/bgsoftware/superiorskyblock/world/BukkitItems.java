@@ -104,7 +104,7 @@ public class BukkitItems {
         if (ServerVersion.isLegacy()) {
             try {
                 SpawnEggMeta spawnEggMeta = (SpawnEggMeta) itemStack.getItemMeta();
-                return spawnEggMeta.getSpawnedType() == null ? EntityType.PIG : spawnEggMeta.getSpawnedType();
+                return spawnEggMeta.getCustomSpawnedType() == null ? EntityType.PIG : spawnEggMeta.getCustomSpawnedType();
             } catch (NoClassDefFoundError error) {
                 return EntityType.fromId(itemStack.getDurability());
             }
