@@ -212,7 +212,7 @@ public class ItemBuilder {
         if (BukkitItems.isValidAndSpawnEgg(itemStack)) {
             if (ServerVersion.isLegacy()) {
                 try {
-                    ((SpawnEggMeta) itemMeta).setSpawnedType(entityType);
+                    ((SpawnEggMeta) itemMeta).setCustomSpawnedType(entityType);
                 } catch (NoClassDefFoundError error) {
                     itemStack.setDurability(entityType.getTypeId());
                 }
